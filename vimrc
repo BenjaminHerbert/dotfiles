@@ -59,6 +59,11 @@ else
   match OverLength /\%81v.\+/
 endif
 
+" Highlight whitespace errors"
+:highlight ExtraWhitespace ctermbg=darkgreen guibg=darkgreen
+:match ExtraWhitespace /\s\+\%#\@<!$/
+:autocmd InsertLeave * redraw!
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 04. Vim UI                                                                 "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
